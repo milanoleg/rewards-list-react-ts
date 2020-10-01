@@ -30,8 +30,11 @@ const styles = (theme: Theme) =>
         width: '25ch'
       }
     },
+    actions: {
+      marginTop: '30px',
+    },
     submitButton: {
-      marginTop: '30px'
+      marginLeft: '20px',
     },
     title: {
       marginBottom: '30px'
@@ -152,10 +155,21 @@ export const RewardEdit: React.FC<IProps> = (props: IProps): React.ReactElement 
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid item xs={12} className={classes.submitButton}>
+              <Grid item xs={12} className={classes.actions}>
                 <Grid container justify="center">
                   <Grid item>
-                    <Button type="submit" variant="contained" color="primary">
+                    <Button
+                      variant="contained"
+                      onClick={() => history.goBack()}
+                    >
+                      Cancel
+                    </Button>
+                    <Button
+                      type="submit"
+                      variant="contained"
+                      color="primary"
+                      className={classes.submitButton}
+                    >
                       Save
                     </Button>
                   </Grid>
