@@ -12,7 +12,7 @@ class RewardsApi implements IRewardsAPI {
     this.baseUrl = baseUrl;
   }
 
-  async fetchRewards() {
+  async fetchRewards(): Promise<IReward[]> {
     const response = await fetch(`${this.baseUrl}/rewards`, {
       method: 'GET',
       headers: {
