@@ -20,6 +20,7 @@
     "@types/url-join": "^4.0.0",
     "@types/yup": "^0.29.7",
     "@typescript-eslint/parser": "^4.3.0",
+    "concurrently": "^5.3.0",
     "connected-react-router": "^6.8.0",
     "formik": "^2.1.6",
     "history": "^4.10.1",
@@ -45,7 +46,7 @@
     "yup": "^0.29.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \"npm run server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "prettier": "prettier --config ./prettier.config.js --write \"src/**/*.{ts,tsx}\"",
