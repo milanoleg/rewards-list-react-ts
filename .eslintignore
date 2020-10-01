@@ -1,0 +1,3 @@
+src/serviceWorker.ts
+src/registerServiceWorker.js
+src/**/__tests__/**
