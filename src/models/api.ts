@@ -8,7 +8,7 @@ class ApiModel {
     this.rewardsApi = rewardsApi;
   }
 
-  getRewards() {
+  getRewards(): Promise<IReward[]> {
     return this.rewardsApi.fetchRewards();
   }
 
